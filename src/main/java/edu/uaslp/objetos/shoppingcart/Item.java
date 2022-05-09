@@ -4,59 +4,51 @@ import java.math.BigDecimal;
 
 public class Item {
 
-    private String itemCode1, providerCode1;
-    private BigDecimal bigDecimal;
-    private int i;
+    private String code;
+    private String providerCode;
+    private int quantity;
+    private BigDecimal unitCost;
 
+    public Item(String itemCode, String providerCode, BigDecimal unitCost, int quantity){
+        this.code = itemCode;
+        this.providerCode = providerCode;
+        this.unitCost = unitCost;
+        this.quantity = quantity;
+    }
 
-    public Item(String itemCode1, String providerCode1, BigDecimal bigDecimal, int i) {
-
-        this.itemCode1 = itemCode1;
-        this.providerCode1 = providerCode1;
-        this.bigDecimal = bigDecimal;
-        this.i = i;
+    public Item(){
 
     }
 
-    public Item() {
-
+    public String getCode() {
+            return code;
     }
 
-    public String setCode(String itemCode1) {
-       return this.itemCode1 = itemCode1;
+    public void setCode(String code) {
+       this.code = code;
     }
 
-    public String setProviderCode(String providerCode1) {
-        return this.providerCode1 = providerCode1;
+    public void setProviderCode(String providerCode) {
+         this.providerCode = providerCode;
     }
 
-    public int setQuantity(int i) {
-     return this.i = i;
+    public String getProviderCode() {
+          return providerCode;
     }
 
-    public BigDecimal setUnitCost(BigDecimal bigDecimal) {
-             return this.bigDecimal = bigDecimal;
+    public void setQuantity(int quantity) {
+      this.quantity = quantity;
     }
 
-    public boolean getCode() {
-        return this.getCode();
+    public int getQuantity() {
+        return quantity;
     }
 
-
-    public boolean getProviderCode() {
-        return this.getProviderCode();
+    public void setUnitCost(BigDecimal unitCost) {
+             this.unitCost = unitCost;
     }
 
-    public long getQuantity() {
-        return this.getQuantity();
-    }
-
-    public boolean getUnitCost() {
-        return this.getUnitCost();
-    }
-
-    public int isEqualByComparingTo(){
-
-        if(item.getUnitCost().compareTo(newItem.getUnitCost()) == 0)
+    public BigDecimal getUnitCost() {
+        return unitCost;
     }
 }
